@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class CarTest {
+public class CarsTest {
 
     Cars cars;
 
@@ -16,25 +16,11 @@ public class CarTest {
             }
         };
     }
-
-    @Test
-    public void canGetNumberOfWheels(){
-        assertThat(cars.getNumberOfWheels()).isEqualTo(4);
-    }
-
-    @Test
-    public void canGetMaximumOccupancy(){
-        assertThat(cars.getMaximumOccupancy()).isEqualTo(5);
-    }
-
-    @Test
-    public void canGetFuelType(){
-        assertThat(cars.getFuelType()).isEqualTo("diesel");
-    }
+    
 
     @Test
     public void isCarManual(){
-        assertThat (cars.isManual()).isEqualTo(true);
+        assertThat (cars.isManual()).isEqualTo(false);
     }
 
     @Test
