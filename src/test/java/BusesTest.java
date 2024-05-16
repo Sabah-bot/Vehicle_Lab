@@ -30,7 +30,7 @@ public class BusesTest {
     public void canGetType(){
         assertThat (buses.getType()).isEqualTo("doubledecker");
     }
-
+   
     @Test
     public void TakesOnPassengers(){
         String expected = "AllAboard";
