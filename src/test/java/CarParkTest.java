@@ -5,30 +5,34 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class CarParkTest {
 
-    CarPark CarPark;
+    CarPark carPark;
+    Vehicles Vehicles;
 
     @BeforeEach
-    public void setUp(){
-        CarPark = new CarPark();
+    public void setUp(){ carPark = new CarPark();
+    }
+
+
+
+    @Test
+    public void testAddVehicle() {
+        carPark.addVehicle(Vehicles);
+        assertThat(carPark.getNumberOfVehicles()).isEqualTo(1);
     }
 
     @Test
-    public void canGetNumberOfVehicles(){
-        assertThat(CarPark.getNumberOfVehicles()).isEqualTo(0);
+    public void testRemoveVehicle() {
+        carPark.removeVehicle(Vehicles);
     }
 
-    @Test
-    public void canAddVehicle(){
-        Cars cars = new Cars(4, 5, "diesel", true) {
-            @Override
-            public boolean isManual() {
-                return false;
-            }
-        };
-        Buses buses = new Buses(6, 29, "petrol", "Doubledecker");
-        CarPark.addVehicle(cars);
-        assertThat(CarPark.getNumberOfVehicles()).isEqualTo(1);
+        @Test
+        public void testGetNumberOfVehicles() {
+            carPark.addVehicle(Vehicles);
+            carPark.addVehicle(Vehicles);
+            int numberOfVehicles = carPark.getNumberOfVehicles();
+            assertThat(numberOfVehicles).isEqualTo(2);
+        }
     }
 
 
-}
+

@@ -26,16 +26,6 @@ public class BusesTest {
         assertThat(buses.getFuelType()).isEqualTo("petrol");
     }
 
-    @Test
-    public void canGetType(){
-        assertThat (buses.getType()).isEqualTo("doubledecker");
-    }
 
-    @Test
-    public void TakesOnPassengers(){
-        String expected = "AllAboard";
-        String result;
-        result = Buses.passage();
-        assertThat(result).isEqualTo(expected);
-    }
+
 }

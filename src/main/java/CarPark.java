@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class CarPark {
 
+    public static String add;
     private ArrayList<Vehicles> vehicles;
 
 
@@ -19,13 +20,8 @@ public class CarPark {
         this.vehicles.remove(vehicle);
     }
 
-    public ArrayList<Vehicles> getVehicles() {
-        return vehicles;
-    }
 
-    public void setVehicles(ArrayList<Vehicles> vehicles) {
-        this.vehicles = vehicles;
-    }
+
 
     public int getNumberOfVehicles() {
         return vehicles.size();

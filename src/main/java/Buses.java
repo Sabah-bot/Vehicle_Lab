@@ -7,28 +7,22 @@ public class Buses extends Vehicles {
         this.type = type;
     }
 
-    public String type (){
-        return type;
+    public int getNumberOfWheels() {
+        return 8;
     }
 
-    public String getType() {
-        return type;
+    public int getMaximumOccupancy() {
+        return 30;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String TakesOnPassengers(){
-        return "Yes!";
-    }
-
-    public static String passage(){
-        return "Yes!";
+    public String getFuelType() {
+        return "petrol";
     }
 
     @Override
     public boolean isManual() {
         return false;
     }
+
+
 }

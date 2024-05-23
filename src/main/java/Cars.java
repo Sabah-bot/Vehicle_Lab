@@ -7,13 +7,7 @@ public abstract class Cars extends Vehicles {
         this.isManual = true;
     }
 
-    public boolean isManual(double amount) {
-        return isManual;
-    }
 
-    public void setManual(boolean manual) {
-        isManual = manual;
-    }
 
     public String turnLightsOn(){
         return "FLASH!";
